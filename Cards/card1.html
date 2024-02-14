@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cards</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .container {
+                width: 100vw;
+                height: 100vh;
+                min-width: (100%, 980px);
+                /* min-height:980px ; */
+                background-color: #8ec5fc;
+                background-image: -webkit-linear-gradient(
+                    62deg,
+                    #8ec5fc 0%,
+                    #e0c3fc 100%
+                );
+                background-image: -moz-linear-gradient(
+                    62deg,
+                    #8ec5fc 0%,
+                    #e0c3fc 100%
+                );
+                background-image: -o-linear-gradient(
+                    62deg,
+                    #8ec5fc 0%,
+                    #e0c3fc 100%
+                );
+                background-image: linear-gradient(
+                    62deg,
+                    #8ec5fc 0%,
+                    #e0c3fc 100%
+                );
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .card {
+                width: 360px;
+                height: 540px;
+                border-radius: 20px;
+                background-color: white;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+                gap: 25px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+                    0 6px 6px rgba(0, 0, 0, 0.78);
+            }
+            .card img {
+                height: 60%;
+                border-radius: 10px;
+                transition: all 0.5s linear 0s;
+            }
+            .card img:hover{
+                transform: scale(1.1);
+            }
+            .card h2 {
+                font-size: 1.5rem;
+            }
+            .card p {
+                font-size: 1.4rem;
+                text-align: center;
+                gap:2px
+            }
+            .card a{
+                text-decoration: none;
+                color: black;
+                font-size: 1.1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="card">
+                <img src="./images/qrcode.jpg" alt="qr_code" />
+                <h2>Add me on Snapchat!</h2>
+                <p>
+                    Omteja Yallapragada
+                </p>
+                <a href="https://www.snapchat.com/add/aboycalled_teja?share_id=9Gaq1lk3e0A&locale=en-IN">aboycalled_teja</a>
+            </div>
+        </div>
+    </body>
+</html>

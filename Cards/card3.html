@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Card3</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .container {
+                height: 100vh;
+                width: 100vw;
+                min-width: min(100%, 980px);
+                background-color: rgb(1, 1, 65);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .card {
+                height: 500px;
+                width: 1000px;
+                background-color: rgb(77, 0, 77);
+                display: flex;
+                position: relative;
+                overflow: hidden;
+            }
+            .card:hover::before {
+                left: 0%;
+            }
+            .card::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                transition: left 5s ease;
+            }
+            .rightBox {
+                width: 50%;
+                height: 100%;
+                background-color: #fff;
+                background-image: url("./images/icon.jpg");
+                background-size: contain;
+                background-position: center;
+            }
+            .leftBox {
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+                width: 50%;
+                height: 100%;
+                color: white;
+            }
+            .textBox {
+                display: flex;
+                gap: 65px;
+                margin: auto;
+                width: 75%;
+                flex-direction: column;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            #desc {
+                font-size: 0.9rem;
+            }
+            #statistics {
+                display: flex;
+                gap: 50px;
+            }
+            .number {
+                font-size: 1.7rem;
+                font-weight: bold;
+            }
+            .unit {
+                font-size: smaller;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="card">
+                <div class="leftBox">
+                    <div class="textBox">
+                        <h1>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.
+                        </h1>
+                        <p id="desc">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Debitis laudantium illum laborum natus quam
+                            consequatur doloribus aliquam voluptas temporibus
+                            aperiam blanditiis et, ipsum cupiditate ipsam!
+                        </p>
+                        <div id="statistics">
+                            <div>
+                                <div class="number">10K+</div>
+                                <div class="unit">comments</div>
+                            </div>
+                            <div>
+                                <div class="number">214</div>
+                                <div class="unit">paid users</div>
+                            </div>
+                            <div>
+                                <div class="number">12M+</div>
+                                <div class="unit">views</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rightBox">
+                    <!-- <img src="./images/icon.jpg" alt="" /> -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
