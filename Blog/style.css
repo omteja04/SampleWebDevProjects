@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100%;
+    width: 100%;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    max-width: 66vw;
+    padding: 2rem 1rem;
+    margin: 0 auto;
+    /* background-color: aqua; */
+}
+.headerContainer {
+    margin-bottom: 2.8rem;
+}
+.headerTitle {
+    margin-bottom: 1rem;
+    font-size: 1.7rem;
+    line-height: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+.headerDesc {
+    max-width: 568px;
+    text-align: center;
+    color: grey;
+    margin: 0 auto;
+}
+
+.mainContainer {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(1, 1fr);
+    /* grid-template-rows: repeat(2, 1fr); */
+}
+
+@media (min-width: 1043px) {
+    .mainContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 1543px) {
+    .mainContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (min-width: 2007px) {
+    .mainContainer {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.cardContainer {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(211, 210, 210, 0.482);
+    border-radius: 10px;
+    /* width: 20rem; */
+    /* height: 20rem; */
+}
+.cardImgContainer {
+    position: relative;
+    overflow: hidden;
+    height: 7rem;
+}
+
+@media (min-width: 768px) {
+    .cardImgContainer {
+        height: 12rem;
+    }
+}
+
+.cardImgClass {
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.cardContainer:hover .cardImgContainer {
+    transform: scale(1.1);
+    transition: 200ms;
+}
+.cardTitleContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+.cardTitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(36, 36, 36);
+    line-height: 1.5rem;
+    margin-bottom: 0.3rem;
+}
+.cardTitleAnchor:hover .cardTitle {
+    color: rgb(38, 38, 237);
+}
+
+.cardDescription {
+    color: grey;
+    font-size: 1rem;
+}
+
+.cardFooterContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    padding-bottom: 1.5rem;
+    align-items: flex-end;
+}
+
+.authorContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+.authorAvatar {
+    height: 2.5rem;
+    width: 2.5rem;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.557);
+    border-radius: 50%;
+    background-color: rgba(214, 206, 206, 0.505);
+}
+
+.authorInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.authorNameAnchor {
+    color: rgb(97, 97, 97);
+}
+.authorNameAnchor:hover {
+    color: blue;
+}
+
+.publishedDate {
+    color: rgb(97, 97, 97);
+}
+.cardTagContainer {
+    font-size: 0.79rem;
+    border: 1px solid rgba(169, 168, 168, 0.418);
+    border-radius: 4px;
+    line-height: 1.3rem;
+    padding: 0.25rem 0.5rem;
+    color: grey;
+}
